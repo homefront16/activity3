@@ -32,13 +32,10 @@ class dataTest extends Controller
         $lastName = $request->input('Last_Name');
 
         $OS = new OrderService();
+        if($OS->createOrder($firstName, $lastName, "Oven"));
 
-        If($OS->createOrder($firstName, $lastName, "Oven")){
-            return view('yes');
-        }
-        else{
-            return "did not work";
-        }
+        return view(yes);
+
 
 
     }

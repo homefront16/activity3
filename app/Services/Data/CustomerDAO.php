@@ -13,8 +13,6 @@ class CustomerDAO
 {
     public function addCustomers($firstName, $lastName){
 
-
-
         $insertDetails = [
             'First_Name' => $firstName,
             'Last_Name' => $lastName
