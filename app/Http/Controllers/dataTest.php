@@ -7,11 +7,13 @@ namespace App\Http\Controllers;
 use App\Services\Business\OrderService;
 use App\Services\Data\CustomerDAO;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class dataTest extends Controller
 {
     public function index(Request $request)
     {
+        Log::info("Entering dataTest Controller index()");
         $firstName = $request->input('First_Name');
         $lastName = $request->input('Last_Name');
 
